@@ -1,28 +1,25 @@
-enum NavbarLink {
-    Art = "/art",
-    Community = "/community",
-    Magazine = "/magazine",
-    Shop = "/shop",
-}
 
-type NavbarLinkType = keyof typeof NavbarLink;
 
-type Navbar = {
+export type TLink =  {
     name: string;
-    url: NavbarLink;
-};
+    path: string;
+  }
 
-
-const NavbarData:Navbar[] = [
-    { name: "Art", url: NavbarLink.Art },
-    { name: "Community", url: NavbarLink.Community },
-    { name: "Magazine", url: NavbarLink.Magazine },
-    { name: "Shop", url: NavbarLink.Shop },
-];
-
+const NAV_LINKS:TLink[] = [
+   {
+        name: 'Home',
+        path: '/'
+    },
+     {
+        name: 'About',
+        path: '/about'
+    },
+   {
+        name: 'Contact',
+        path: '/contact'
+    }
+]
 
 export {
-    NavbarData
-};
-
-export type { Navbar };
+    NAV_LINKS
+}
